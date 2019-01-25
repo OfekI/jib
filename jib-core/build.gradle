@@ -1,6 +1,7 @@
 plugins {
   id 'java-library'
   id 'checkstyle'
+  id 'jacoco'
   id 'com.github.sherter.google-java-format' version '0.8'
   id 'net.ltgt.apt' version '0.19'
   id 'net.ltgt.errorprone' version '0.6'
@@ -9,6 +10,10 @@ plugins {
   // For release.
   id 'maven'
   id 'net.researchgate.release' version '2.7.0'
+}
+
+jacoco {
+  toolVersion = "0.8.2"
 }
 
 group 'com.google.cloud.tools'
@@ -228,3 +233,11 @@ release {
   }
 }
 /* RELEASE */
+
+jacocoTestReport {
+  reports {
+    html.enabled true
+    csv.enabled true
+    xml.enabled false
+  }
+}
