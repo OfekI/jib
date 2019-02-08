@@ -173,11 +173,6 @@ public class ImageToJsonTranslatorTest {
     Assert.assertEquals(expected, ImageToJsonTranslator.environmentMapToList(input));
   }
 
-  @Test
-  public void testSetToMapWithNullSet() {
-    Assert.assertNull(ImageToJsonTranslator.setToMap(null, null));
-  }
-
   /** Tests translation of image to {@link BuildableManifestTemplate}. */
   private <T extends BuildableManifestTemplate> void testGetManifest(
       Class<T> manifestTemplateClass, String translatedJsonFilename)

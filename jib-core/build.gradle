@@ -80,6 +80,9 @@ jar {
     attributes 'Bundle-License': 'https://www.apache.org/licenses/LICENSE-2.0'
     attributes 'Export-Package': 'com.google.cloud.tools.jib.*'
   }
+  from {
+    configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+  }
 }
 
 // Integration tests must be run explicitly
