@@ -116,8 +116,9 @@ public class ImageToJsonTranslator {
    * @param <E> the type of the elements from the set
    * @return an map
    */
+  @VisibleForTesting
   @Nullable
-  private static <E> Map<String, Map<?, ?>> setToMap(
+  static <E> Map<String, Map<?, ?>> setToMap(
       @Nullable Set<E> set, Function<E, String> keyMapper) {
     if (set == null) {
       return null;
