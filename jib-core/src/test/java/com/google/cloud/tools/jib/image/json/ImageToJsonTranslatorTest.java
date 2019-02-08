@@ -175,7 +175,7 @@ public class ImageToJsonTranslatorTest {
 
   @Test
   public void testSetToMapWithNullSet() {
-    Assert.assertNull(ImageToJsonTranslator.setToMap(null, null))
+    Assert.assertNull(ImageToJsonTranslator.setToMap(null, null));
   }
 
   /** Tests translation of image to {@link BuildableManifestTemplate}. */
